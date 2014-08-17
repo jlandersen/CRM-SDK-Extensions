@@ -2,7 +2,7 @@
 using System.Linq;
 using Microsoft.Xrm.Sdk;
 
-namespace CrmPowerTools
+namespace CrmExtensions
 {
     public class TrackingEntity : Entity
     {

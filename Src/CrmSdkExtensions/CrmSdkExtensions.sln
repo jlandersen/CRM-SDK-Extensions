@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrmPowerTools", "CrmPowerTools.csproj", "{D837B64B-6C07-4689-8EED-D5F6A19CB6AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrmSdkExtensions", "CrmSdkExtensions.csproj", "{D837B64B-6C07-4689-8EED-D5F6A19CB6AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrmPowerTools.Tests", "..\CrmPowerTools.Tests\CrmPowerTools.Tests.csproj", "{C9169FC5-F5B4-4BEC-B256-CAEAB82FACCA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrmSdkExtensions.Tests", "..\CrmSdkExtensions.Tests\CrmSdkExtensions.Tests.csproj", "{C9169FC5-F5B4-4BEC-B256-CAEAB82FACCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

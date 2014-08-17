@@ -7,8 +7,8 @@
     <ProjectGuid>{C9169FC5-F5B4-4BEC-B256-CAEAB82FACCA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CrmPowerTools.Tests</RootNamespace>
-    <AssemblyName>CrmPowerTools.Tests</AssemblyName>
+    <RootNamespace>CrmExtensions.Tests</RootNamespace>
+    <AssemblyName>CrmExtensions.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -53,9 +53,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CrmPowerTools\CrmPowerTools.csproj">
+    <ProjectReference Include="..\CrmSdkExtensions\CrmSdkExtensions.csproj">
       <Project>{D837B64B-6C07-4689-8EED-D5F6A19CB6AA}</Project>
-      <Name>CrmPowerTools</Name>
+      <Name>CrmSdkExtensions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
