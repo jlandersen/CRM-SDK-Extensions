@@ -1,7 +1,5 @@
-CRM Power Tools 
-
+# CRM Power Tools 
 =============
-
 Some things that over time has emerged in my solutions, and have found handy for CRM 2011/2013/Online development.
 
 
