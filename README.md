@@ -13,9 +13,11 @@ Only attributes that have changed will be sent and updated server side.
 IOrganizationService service = ...
 Entity retrievedEntity = service.Retrieve(..)
 
+// Entity may contain n attributes
 TrackingEntity entity = new TrackingEntity(retrievedEntity);
 entity["money"] = 250.0m;
 
+// This will only send money to the CRM server
 service.Update(entity.ToFinalEntity());
 
 ```
