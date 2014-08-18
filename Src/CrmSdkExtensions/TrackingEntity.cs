@@ -20,21 +20,7 @@ namespace CrmExtensions
 
         public TrackingEntity(Entity existing)
         {
-            this.Id = existing.Id;
-            this.LogicalName = existing.LogicalName;
-            this.EntityState = existing.EntityState;
-            this.Attributes = existing.Attributes;
-            this.ExtensionData = existing.ExtensionData;
-
-            foreach (var relatedEntity in existing.RelatedEntities)
-            {
-                this.RelatedEntities.Add(relatedEntity);
-            }
-
-            foreach (var formattedValue in existing.FormattedValues)
-            {
-                this.FormattedValues.Add(formattedValue);
-            }
+            ShallowCopyAttributesExcluded(existing, this);
         }
 
         /// <summary>
@@ -84,31 +70,23 @@ namespace CrmExtensions
             return finalEntity;
         }
 
-        internal Entity ShallowCopyAttributesExcluded(Entity entity)
+        internal Entity ShallowCopyAttributesExcluded(Entity entity, Entity destination = null)
         {
-            Entity copy = new Entity();
+            Entity copy = destination ?? new Entity();
 
             copy.Id = entity.Id;
             copy.LogicalName = entity.LogicalName;
             copy.EntityState = entity.EntityState;
             copy.ExtensionData = entity.ExtensionData;
-
-            foreach (var relatedEntity in entity.RelatedEntities)
-            {
-                copy.RelatedEntities.Add(relatedEntity);
-            }
-
-            foreach (var formattedValue in entity.FormattedValues)
-            {
-                copy.FormattedValues.Add(formattedValue);
-            }
+            copy.RelatedEntities.AddRange(entity.RelatedEntities);
+            copy.FormattedValues.AddRange(entity.FormattedValues);
 
             return copy;
         }
 
-        internal Entity ShallowCopy(Entity entity)
+        internal Entity ShallowCopy(Entity entity, Entity destination = null)
         {
-            Entity initialCopy = ShallowCopyAttributesExcluded(entity);
+            Entity initialCopy = ShallowCopyAttributesExcluded(entity, destination);
             initialCopy.Attributes = entity.Attributes;
 
             return initialCopy;
